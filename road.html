@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body  {
+          background-image: url("race.png");
+          background-repeat: no-repeat, repeat;
+         background-size: 100% 100px;
+        }
+        </style>
+
+    <script>
+    
+        class Car {
+            constructor (emoji,speed=4) {
+                this.emoji = emoji;
+                this.speed= speed;
+            }
+            addToPage() {
+                let marquee = document.createElement("MARQUEE");
+                marquee.innerHTML = this.emoji;
+                marquee.scrollAmount = this.speed;
+                document.body.appendChild(marquee);
+                console.log('hello');
+    
+            }
+        }
+        window.addEventListener("DOMContentLoaded", (event) => {
+             const automobile = new Car("🚗" , 3);
+             automobile.addToPage();
+
+             const fomular1 = new Car("🏎️" ,5);
+             fomular1.addToPage();
+
+             const taxi = new Car("🚕" ,4);
+             taxi.addToPage();
+    });
+        
+    </script>
+</head>
+<body>
+    
+
+
+
+    
+</body>
+
+</html>
